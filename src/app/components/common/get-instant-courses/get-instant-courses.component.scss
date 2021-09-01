@@ -40,7 +40,7 @@
         };
         font: {
             size: 36px;
-            weight: 800;
+            weight: 700;
         };
     }
     .default-btn {
@@ -59,7 +59,7 @@
 .get-instant-courses-area-two {
     position: relative;
     z-index: 1;
-    
+
     &::before {
         content: '';
         position: absolute;
@@ -101,7 +101,7 @@
         margin-bottom: 15px;
         font: {
             size: 36px;
-            weight: 800;
+            weight: 700;
         };
     }
     p {
@@ -143,7 +143,7 @@
     }
     .get-instant-courses-content-style-two {
         text-align: center;
-        
+
         .sub-title {
             font-size: 13px;
         }
@@ -224,5 +224,5 @@
             width: auto;
         }
     }
-    
+
 }

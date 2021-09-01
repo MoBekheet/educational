@@ -46,7 +46,7 @@
         color: var(--mainColor);
         font: {
             size: 44px;
-            weight: 800;
+            weight: 700;
         };
         span {
             font-size: 48px;
@@ -112,7 +112,7 @@
         color: var(--mainColor);
         font: {
             size: 44px;
-            weight: 800;
+            weight: 700;
         };
         span {
             font-size: 48px;
@@ -135,7 +135,7 @@
 }
 
 @media only screen and (max-width: 767px) {
-    
+
     .funfacts-area {
         .col-lg-3 {
             border: {
@@ -309,7 +309,7 @@
 
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
-    
+
     .single-funfacts-item {
         h3 {
             font-size: 35px;

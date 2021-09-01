@@ -15,7 +15,7 @@
                     white-space: nowrap;
                     font: {
                         size: var(--fontSize);
-                        weight: 800;
+                        weight: 700;
                     };
                 }
             }
@@ -23,7 +23,7 @@
         tbody {
             tr {
                 border-color: #eaedff;
-                
+
                 td {
                     vertical-align: middle;
                     color: var(--optionalColor);
@@ -71,7 +71,7 @@
                             position: relative;
                             text-align: center;
                             display: inline-block;
-                
+
                             input {
                                 height: 45px;
                                 color: var(--blackColor);
@@ -146,14 +146,14 @@
         margin-bottom: 25px;
         font: {
             size: 24px;
-            weight: 800;
+            weight: 700;
         };
     }
     ul {
         padding-right: 0;
         margin: 0 0 25px;
         list-style-type: none;
-        
+
         li {
             border: 1px solid #eaedff;
             padding: 10px 15px;

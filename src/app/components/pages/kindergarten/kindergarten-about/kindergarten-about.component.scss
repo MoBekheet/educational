@@ -46,7 +46,7 @@
         };
         font: {
             size: 36px;
-            weight: 800;
+            weight: 700;
         };
     }
     .features-list {
@@ -147,7 +147,7 @@
                     border-radius: 50%;
                     font-size: 20px;
                     transition: var(--transition);
-    
+
                     &::after {
                         content: '';
                         position: absolute;
@@ -166,7 +166,7 @@
                     i {
                         background-color: var(--mainColor);
                         color: var(--mainColor);
-    
+
                         &::after {
                             background-color: var(--whiteColor);
                         }
@@ -296,7 +296,7 @@
 
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
-    
+
     .kindergarten-about-image {
         margin-left: 0;
 

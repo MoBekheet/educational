@@ -64,7 +64,7 @@
                             line-height: 28px;
                             font: {
                                 size: 12px;
-                                weight: 800;
+                                weight: 700;
                             };
                             &::before {
                                 content: '';
@@ -146,7 +146,7 @@
             margin-bottom: 0;
             font: {
                 size: 20px;
-                weight: 800;
+                weight: 700;
             };
             a {
                 display: inline-block;
@@ -157,7 +157,7 @@
             transition: var(--transition);
             font: {
                 size: var(--fontSize);
-                weight: 800;
+                weight: 700;
             };
             .old-price {
                 text-decoration: line-through;
@@ -188,7 +188,7 @@
             transform: translateX(20px);
             font: {
                 size: 14px;
-                weight: 800;
+                weight: 700;
             };
             &:hover {
                 color: var(--mainColor);
@@ -258,7 +258,7 @@
 
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
-    
+
     .single-products-box {
         .products-content {
             h3 {

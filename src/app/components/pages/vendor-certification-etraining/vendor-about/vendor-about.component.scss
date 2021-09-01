@@ -35,7 +35,7 @@
         };
         font: {
             size: 36px;
-            weight: 800;
+            weight: 700;
         };
     }
     .link-btn {
@@ -60,7 +60,7 @@
     margin-right: 30px;
     position: relative;
     z-index: 1;
-    
+
     .image {
         overflow: hidden;
         border-radius: 5px;
@@ -99,7 +99,7 @@
         background-color: var(--mainColor);
         border-radius: 50%;
         color: var(--whiteColor);
-    
+
         &::after, &::before {
             content: '';
             display: block;
@@ -122,7 +122,7 @@
         &:hover {
             color: var(--whiteColor);
             background-color: var(--blackColor);
-    
+
             &::before, &::after {
                 border-color: var(--blackColor);
             }
@@ -143,7 +143,7 @@
 }
 
 @media only screen and (max-width: 767px) {
-    
+
     .about-area-two {
         &.pt-70 {
             padding-top: 60px;
@@ -178,7 +178,7 @@
 
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
-    
+
     .about-area-two {
         &.pt-70 {
             padding-top: 80px;
@@ -186,7 +186,7 @@
     }
     .about-content-box {
         text-align: center;
-        
+
         .sub-title {
             font-size: 13.5px;
         }

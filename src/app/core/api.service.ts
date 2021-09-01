@@ -14,6 +14,10 @@ export class ApiService {
     return this.httpClient.get(`${environment.url_api}Courses/GetAllCourses`);
   }
 
+  public getOneCourseById(CourseId): Observable<any> {
+    return this.httpClient.get(`${environment.url_api}Courses/GetOneCourse?CourseId=${CourseId}`);
+  }
+
   public getAllTeachers(): Observable<any> {
     return this.httpClient.get(`${environment.url_api}Teachers/GetAllTeachers`);
   }

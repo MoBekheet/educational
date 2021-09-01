@@ -1,7 +1,7 @@
 .about-area {
     position: relative;
     z-index: 1;
-    
+
     .bulb {
         right: auto;
         left: 50px;
@@ -54,7 +54,7 @@
         };
         font: {
             size: 36px;
-            weight: 800;
+            weight: 700;
         };
     }
     .features-list {
@@ -117,7 +117,7 @@
 }
 
 @media only screen and (max-width: 767px) {
-    
+
     .about-image {
         .row {
             .col-lg-6 {
@@ -172,7 +172,7 @@
 
 }
 @media only screen and (min-width: 576px) and (max-width: 767px) {
-    
+
     .about-content {
         .about-list {
             li {
@@ -260,5 +260,5 @@
             width: auto;
         }
     }
-    
+
 }

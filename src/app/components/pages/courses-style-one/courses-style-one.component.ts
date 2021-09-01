@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {environment} from '../../../../environments/environment';
 import {ApiService} from '../../../core/api.service';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-courses-style-one',
@@ -14,7 +15,8 @@ export class CoursesStyleOneComponent implements OnInit {
   loader = false;
   urlImage = environment.url_image;
 
-  constructor(private apiService: ApiService) {}
+  constructor(private apiService: ApiService, private router: Router) {
+  }
 
   ngOnInit(): void {
     this.loader = true;
@@ -24,4 +26,7 @@ export class CoursesStyleOneComponent implements OnInit {
     });
   }
 
+  goTo(CourseId): void {
+    this.router.navigate(['/single-courses-1', {i: CourseId}]);
+  }
 }

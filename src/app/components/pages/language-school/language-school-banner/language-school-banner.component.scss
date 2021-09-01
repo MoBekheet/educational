@@ -16,7 +16,7 @@
         margin-bottom: 18px;
         font: {
             size: 52px;
-            weight: 800;
+            weight: 700;
         };
     }
     p {
@@ -74,7 +74,7 @@
 
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
-    
+
     .main-banner-wrapper {
         padding: {
             top: 100px;
@@ -133,7 +133,7 @@
 
 }
 @media only screen and (min-width: 1550px) {
-    
+
     .main-banner-wrapper {
         .container-fluid {
             max-width: 1480px;
@@ -146,5 +146,5 @@
             };
         }
     }
-    
+
 }

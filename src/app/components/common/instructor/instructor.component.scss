@@ -32,7 +32,7 @@
             margin-bottom: 0;
             font: {
                 size: 22px;
-                weight: 800;
+                weight: 700;
             };
         }
         .sub-title {
@@ -60,7 +60,7 @@
             li {
                 display: inline-block;
                 margin-left: 3px;
-    
+
                 &:last-child {
                     margin-left: 0;
                 }
@@ -73,7 +73,7 @@
                     color: var(--blackColor);
                     position: relative;
                     border-radius: 2px;
-    
+
                     i {
                         position: absolute;
                         left: 0;
@@ -137,7 +137,7 @@
                     color: var(--blackColor);
                     border-radius: 2px;
                     transition: var(--transition);
-    
+
                     i {
                         position: absolute;
                         left: 0;
@@ -176,7 +176,7 @@
             margin-bottom: 0;
             font: {
                 size: 23px;
-                weight: 800;
+                weight: 700;
             };
         }
         span {

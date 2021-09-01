@@ -17,7 +17,7 @@
         margin-bottom: 15px;
         font: {
             size: 24px;
-            weight: 800;
+            weight: 700;
         }
     }
     .price {
@@ -109,7 +109,7 @@
             margin-left: 10px;
             text-align: center;
             display: inline-block;
-            position: relative;    
+            position: relative;
 
             input {
                 height: 50px;
@@ -171,7 +171,7 @@
                     text-align: center;
                     font-size: 17px;
                     margin-right: 5px;
-    
+
                     &:hover, &:focus {
                         color: var(--mainColor);
                         background-color: transparent;

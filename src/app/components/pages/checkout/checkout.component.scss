@@ -31,7 +31,7 @@
         border-bottom: 1px solid #eeeeee;
         font: {
             size: 24px;
-            weight: 800;
+            weight: 700;
         };
         &::before {
             content: '';
@@ -110,7 +110,7 @@
         border-bottom: 1px solid #eeeeee;
         font: {
             size: 24px;
-            weight: 800;
+            weight: 700;
         };
         &::before {
             content: '';
@@ -125,7 +125,7 @@
     .order-table {
         table {
             margin-bottom: 0;
-    
+
             thead {
                 tr {
                     border-color: #eaedff;
@@ -137,7 +137,7 @@
                         padding: 12px 20px 10px;
                         white-space: nowrap;
                         font: {
-                            weight: 800;
+                            weight: 700;
                             size: var(--fontSize);
                         };
                     }
@@ -171,7 +171,7 @@
                             span {
                                 color: var(--blackColor);
                                 font: {
-                                    weight: 800;
+                                    weight: 700;
                                     size: 16px;
                                 };
                             }
@@ -179,7 +179,7 @@
                         &.shipping-price, &.order-subtotal-price, &.product-subtotal {
                             color: var(--blackColor);
                             font: {
-                                weight: 800;
+                                weight: 700;
                                 size: 16px;
                             };
                         }
@@ -193,7 +193,7 @@
         box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.06);
         margin-top: 30px;
         padding: 30px;
-        
+
         .payment-method {
             p {
                 [type="radio"] {
@@ -211,7 +211,7 @@
                             position: relative;
                             margin-bottom: 8px;
                             font: {
-                                weight: 800;
+                                weight: 700;
                             }
                             &::before {
                                 content: '';
@@ -322,7 +322,7 @@
     }
     .order-details {
         margin-top: 30px;
-        
+
         .title {
             font-size: 19px;
         }
