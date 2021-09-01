@@ -27,7 +27,7 @@
             <div class="col-lg-4 col-sm-6 col-md-6" *ngFor="let filed of allTeachers">
                 <div class="single-advisor-item">
                     <div class="advisor-image">
-                        <img [src]="urlImage + filed.image" alt="image">
+                        <img [src]="urlImage + filed.image" [alt]="filed.name">
                         <ul class="social-link">
                             <li><a href="#" class="d-block" target="_blank"><i class='bx bxl-facebook'></i></a></li>
                             <li><a href="#" class="d-block" target="_blank"><i class='bx bxl-twitter'></i></a></li>

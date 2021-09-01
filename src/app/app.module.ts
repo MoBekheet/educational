@@ -23,7 +23,6 @@ import { OnlineTrainingSchoolComponent } from './components/pages/online-trainin
 import { DistanceLearningComponent } from './components/pages/distance-learning/distance-learning.component';
 import { LanguageSchoolComponent } from './components/pages/language-school/language-school.component';
 import { ModernSchoolingComponent } from './components/pages/modern-schooling/modern-schooling.component';
-import { YogaTrainingComponent } from './components/pages/yoga-training/yoga-training.component';
 import { HealthCoachingComponent } from './components/pages/health-coaching/health-coaching.component';
 import { KindergartenComponent } from './components/pages/kindergarten/kindergarten.component';
 import { ContactUsComponent } from './components/pages/contact-us/contact-us.component';
@@ -123,15 +122,11 @@ import { ModernSchoolingCoursesComponent } from './components/pages/modern-schoo
 import { ModernSchoolingEventsComponent } from './components/pages/modern-schooling/modern-schooling-events/modern-schooling-events.component';
 import { OverviewComponent } from './components/common/overview/overview.component';
 import { TrainingComponent } from './components/common/training/training.component';
-import { YogaAboutComponent } from './components/pages/yoga-training/yoga-about/yoga-about.component';
 import { FeedbackStyleTwoComponent } from './components/common/feedback-style-two/feedback-style-two.component';
 import { DownloadSyllabusComponent } from './components/common/download-syllabus/download-syllabus.component';
 import { FlexiblePricingComponent } from './components/common/flexible-pricing/flexible-pricing.component';
-import { YogaBlogComponent } from './components/pages/yoga-training/yoga-blog/yoga-blog.component';
 import { SubscribeStyleTwoComponent } from './components/common/subscribe-style-two/subscribe-style-two.component';
 import { ExperienceComponent } from './components/common/experience/experience.component';
-import { YogaCoursesComponent } from './components/pages/yoga-training/yoga-courses/yoga-courses.component';
-import { YogaBannerComponent } from './components/pages/yoga-training/yoga-banner/yoga-banner.component';
 import { LifestyleComponent } from './components/common/lifestyle/lifestyle.component';
 import { ProgramComponent } from './components/common/program/program.component';
 import { ServicesComponent } from './components/common/services/services.component';
@@ -176,6 +171,7 @@ import { LearningBlogComponent } from './components/pages/learning-management/le
 import { LearningViewCoursesComponent } from './components/pages/learning-management/learning-view-courses/learning-view-courses.component';
 import { LearningPremiumAccessComponent } from './components/pages/learning-management/learning-premium-access/learning-premium-access.component';
 import {HttpClientModule} from '@angular/common/http';
+import {ApiService} from "./core/api.service";
 
 @NgModule({
   declarations: [
@@ -191,7 +187,6 @@ import {HttpClientModule} from '@angular/common/http';
     DistanceLearningComponent,
     LanguageSchoolComponent,
     ModernSchoolingComponent,
-    YogaTrainingComponent,
     HealthCoachingComponent,
     KindergartenComponent,
     ContactUsComponent,
@@ -291,15 +286,11 @@ import {HttpClientModule} from '@angular/common/http';
     ModernSchoolingEventsComponent,
     OverviewComponent,
     TrainingComponent,
-    YogaAboutComponent,
     FeedbackStyleTwoComponent,
     DownloadSyllabusComponent,
     FlexiblePricingComponent,
-    YogaBlogComponent,
     SubscribeStyleTwoComponent,
     ExperienceComponent,
-    YogaCoursesComponent,
-    YogaBannerComponent,
     LifestyleComponent,
     ProgramComponent,
     ServicesComponent,
@@ -358,7 +349,7 @@ import {HttpClientModule} from '@angular/common/http';
     AccordionModule,
     FormsModule
   ],
-  providers: [],
+  providers: [ApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

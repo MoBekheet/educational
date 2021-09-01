@@ -6,7 +6,6 @@ import { OnlineTrainingSchoolComponent } from './components/pages/online-trainin
 import { DistanceLearningComponent } from './components/pages/distance-learning/distance-learning.component';
 import { LanguageSchoolComponent } from './components/pages/language-school/language-school.component';
 import { ModernSchoolingComponent } from './components/pages/modern-schooling/modern-schooling.component';
-import { YogaTrainingComponent } from './components/pages/yoga-training/yoga-training.component';
 import { HealthCoachingComponent } from './components/pages/health-coaching/health-coaching.component';
 import { KindergartenComponent } from './components/pages/kindergarten/kindergarten.component';
 import { ContactUsComponent } from './components/pages/contact-us/contact-us.component';
@@ -63,7 +62,6 @@ const routes: Routes = [
     {path: 'distance-learning', component: DistanceLearningComponent},
     {path: 'language-school', component: LanguageSchoolComponent},
     {path: 'modern-schooling', component: ModernSchoolingComponent},
-    {path: 'yoga-training', component: YogaTrainingComponent},
     {path: 'health-coaching', component: HealthCoachingComponent},
     {path: 'kindergarten', component: KindergartenComponent},
     {path: 'gym-coaching', component: GymCoachingComponent},

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {environment} from '../../../../environments/environment';
-import {HttpClient} from '@angular/common/http';
+import {ApiService} from '../../../core/api.service';
 
 @Component({
   selector: 'app-teacher',
@@ -12,18 +12,13 @@ export class TeacherComponent implements OnInit {
   loader = false;
   urlImage = environment.url_image;
 
-  constructor(private httpClient: HttpClient) {}
+  constructor(private apiService: ApiService) {}
 
   ngOnInit(): void {
-    this.getAllTeachers();
-  }
-
-  getAllTeachers(): void {
     this.loader = true;
-    this.httpClient.get(`${environment.url_api}Teachers/GetAllTeachers`).subscribe(response => {
+    this.apiService.getAllTeachers().subscribe(response => {
       this.allTeachers = response;
       this.loader = false;
-      console.error(this.allTeachers);
     });
   }
 

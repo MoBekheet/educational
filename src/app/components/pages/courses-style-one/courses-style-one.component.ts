@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {HttpClient} from '@angular/common/http';
 import {environment} from '../../../../environments/environment';
+import {ApiService} from '../../../core/api.service';
 
 @Component({
   selector: 'app-courses-style-one',
@@ -14,18 +14,14 @@ export class CoursesStyleOneComponent implements OnInit {
   loader = false;
   urlImage = environment.url_image;
 
-  constructor(private httpClient: HttpClient) {}
+  constructor(private apiService: ApiService) {}
 
   ngOnInit(): void {
-    this.getAllCourses();
-  }
-
-  getAllCourses(): void {
     this.loader = true;
-    this.httpClient.get(`${environment.url_api}Courses/GetAllCourses`).subscribe(response => {
+    this.apiService.getAllCourses().subscribe(response => {
       this.allCourses = response;
       this.loader = false;
-      console.error(this.allCourses);
     });
   }
+
 }
