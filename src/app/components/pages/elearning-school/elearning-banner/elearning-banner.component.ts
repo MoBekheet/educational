@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {ApiService} from "../../../../core/api.service";
 import {Router} from "@angular/router";
 import {environment} from "../../../../../environments/environment";
+import {map} from "rxjs/operators";
 
 @Component({
   selector: 'app-elearning-banner',
@@ -20,11 +21,7 @@ export class ElearningBannerComponent implements OnInit {
   ngOnInit(): void {
     this.apiService.getAllCourses().subscribe(response => {
       if (response) {
-        for (let i = 0; i < response.length; i++) {
-          if (i < 2) {
-            this.allCourses.push(response[i]);
-          }
-        }
+        this.allCourses = response.splice(0, 2);
       }
     });
   }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {ApiService} from "../../../../core/api.service";
 import {Router} from "@angular/router";
 import {environment} from "../../../../../environments/environment";
@@ -14,16 +14,13 @@ export class ElearningAboutComponent implements OnInit {
   loader = false;
   urlImage = environment.url_image;
 
-  constructor(private apiService: ApiService, private router: Router) { }
+  constructor(private apiService: ApiService, private router: Router) {
+  }
 
   ngOnInit(): void {
     this.apiService.getAllCourses().subscribe(response => {
       if (response) {
-        for (let i = 0; i < response.length; i++) {
-          if (i < 4) {
-            this.allCourses.push(response[i]);
-          }
-        }
+        this.allCourses = response.splice(0, 4);
       }
       this.loader = false;
     });
