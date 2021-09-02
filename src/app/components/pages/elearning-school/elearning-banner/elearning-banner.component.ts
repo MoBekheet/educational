@@ -2,7 +2,6 @@ import {Component, OnInit} from '@angular/core';
 import {ApiService} from "../../../../core/api.service";
 import {Router} from "@angular/router";
 import {environment} from "../../../../../environments/environment";
-import {map} from "rxjs/operators";
 
 @Component({
   selector: 'app-elearning-banner',
