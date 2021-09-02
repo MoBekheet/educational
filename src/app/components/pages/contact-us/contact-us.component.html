@@ -2,10 +2,10 @@
     <div class="container">
         <div class="page-title-content">
             <ul>
-                <li><a routerLink="/">Home</a></li>
-                <li>Contact</li>
+                <li><a routerLink="/">الرئيسية</a></li>
+                <li>اتصل بنا</li>
             </ul>
-            <h2>Contact</h2>
+            <h2>اتصل بنا</h2>
         </div>
     </div>
     <div class="shape9"><img src="assets/img/shape8.svg" alt="image"></div>
@@ -16,72 +16,78 @@
         <div class="row">
             <div class="col-lg-6 col-md-12">
                 <div class="contact-info">
-                    <span class="sub-title">Contact Details</span>
-                    <h2>Get in Touch</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra.</p>
+                    <span class="sub-title">بيانات المتصل</span>
+                    <h2>ابقى على تواصل</h2>
+<!--                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra.</p>-->
                     <ul>
                         <li>
                             <div class="icon">
                                 <i class='bx bx-map'></i>
                             </div>
-                            <h3>Our Address</h3>
-                            <p>2750 Quadra Street Victoria Road, New York, USA</p>
+                            <h3>عنواننا</h3>
+                            <p>الباحة _دوار الشفاء _بجانب بن دماس</p>
                         </li>
                         <li>
                             <div class="icon">
                                 <i class='bx bx-phone-call'></i>
                             </div>
-                            <h3>Contact</h3>
-                            <p>Mobile: <a href="tel:+44457895789">(+44) - 45789 - 5789</a></p>
-                            <p>Mail: <a href="mailto:hello@odemy.com">hello@odemy.com</a></p>
+                            <h3>اتصل بنا</h3>
+                            <p>الجوال : <a href="tel:+44457895789">055 965 2296</a></p>
+                            <p>البريد : <a href="mailto:hello@odemy.com">future2030v@gmail.com</a></p>
                         </li>
-                        <li>
-                            <div class="icon">
-                                <i class='bx bx-time-five'></i>
-                            </div>
-                            <h3>Hours of Operation</h3>
-                            <p>Monday - Friday: 09:00 - 20:00</p>
-                            <p>Sunday & Saturday: 10:30 - 22:00</p>
-                        </li>
+
                     </ul>
                 </div>
             </div>
             <div class="col-lg-6 col-md-12">
                 <div class="contact-form" *ngFor="let Image of bgImage;" style="background-image: url({{Image.img}});">
-                    <h2>Ready to Get Started?</h2>
-                    <p>Your email address will not be published. Required fields are marked *</p>
+                    <h2>على استعداد للبدء؟</h2>
+                    <p>لن يتم نشر عنوان بريدك الإلكتروني. الحقول المطلوبة محددة *</p>
                     <form #contactForm="ngForm" (ngSubmit)="submit(contactForm.value)">
                         <div class="row">
                             <div class="col-lg-12 col-md-6">
                                 <div class="form-group">
-                                    <input required minlength="3" maxlength="50" ngModel name="name" type="text" #name="ngModel" class="form-control" id="name" placeholder="Your name">
+                                    <input required minlength="3" maxlength="50" ngModel name="name" type="text" #name="ngModel" class="form-control" id="name" placeholder="اسمك">
                                     <div class="alert alert-danger" *ngIf="name.touched && !name.valid">
-                                        <div *ngIf="name.errors.required">Name is required.</div>
-                                        <div *ngIf="name.errors.minlength">Name is minimum {{ name.errors.minlength.requiredLength }} character.</div>
-                                        <div *ngIf="name.errors.maxlength">Name is maximum 50 character.</div>
+                                        <div *ngIf="name.errors.required">مطلوب اسم.</div>
+<!--                                        <div *ngIf="name.errors.minlength">Name is minimum {{ name.errors.minlength.requiredLength }} اختلاف الشخصيات.</div>-->
+<!--                                        <div *ngIf="name.errors.maxlength">Name is maximum 50 character.</div>-->
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-12 col-md-6">
                                 <div class="form-group">
-                                    <input required ngModel name="email" type="text" #email="ngModel" class="form-control" id="email" placeholder="Your email address">
-                                    <div class="alert alert-danger" *ngIf="email.touched && !email.valid">Email Address is required.</div>
+                                    <input required ngModel name="email" type="text" #email="ngModel" class="form-control" id="email" placeholder="عنوان بريدك الإلكتروني">
+                                    <div class="alert alert-danger" *ngIf="email.touched && !email.valid">عنوان البريد الإلكتروني مطلوب.</div>
                                 </div>
                             </div>
                             <div class="col-lg-12 col-md-12">
                                 <div class="form-group">
-                                    <input required ngModel name="number" type="text" #number="ngModel" class="form-control" id="number" placeholder="Your phone number">
-                                    <div class="alert alert-danger" *ngIf="number.touched && !number.valid">Phone number is required.</div>
+                                    <input required ngModel name="number" type="text" #number="ngModel" class="form-control" id="number" placeholder="رقم تليفونك">
+                                    <div class="alert alert-danger" *ngIf="number.touched && !number.valid">رقم الهاتف مطلوب.</div>
                                 </div>
                             </div>
                             <div class="col-lg-12 col-md-12">
                                 <div class="form-group">
-                                    <textarea required ngModel #message="ngModel" name="message" id="message" cols="30" rows="5" class="form-control" placeholder="Write your message..."></textarea>
-                                    <div class="alert alert-danger" *ngIf="message.touched && !name.valid">Message is required.</div>
+                                    <textarea required ngModel #message="ngModel" name="message" id="message" cols="30" rows="5" class="form-control" placeholder="اكتب رسالتك..."></textarea>
+                                    <div class="alert alert-danger" *ngIf="message.touched && !name.valid">الرسالة مطلوبة.</div>
                                 </div>
                             </div>
                             <div class="col-lg-12 col-md-12">
-                                <button type="submit" class="default-btn" [class.disabled]="!contactForm.valid">Send Message<span></span></button>
+                              <div class="d-flex align-items-center justify-content-start">
+                                <button type="submit" [disabled]="loader" class="default-btn me-3" (click)="contactForm.form.reset()" [class.disabled]="!contactForm.valid">أرسل رسالة<span></span></button>
+                                <div class="d-flex align-items-center justify-content-center" *ngIf="loader">
+                                  <div class="sk-chase">
+                                    <div class="sk-chase-dot"></div>
+                                    <div class="sk-chase-dot"></div>
+                                    <div class="sk-chase-dot"></div>
+                                    <div class="sk-chase-dot"></div>
+                                    <div class="sk-chase-dot"></div>
+                                    <div class="sk-chase-dot"></div>
+                                  </div>
+                                </div>
+                              </div>
+
                             </div>
                         </div>
                     </form>
@@ -90,7 +96,9 @@
         </div>
     </div>
 </div>
+<!--
 
 <div id="map">
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d260370.4624153429!2d-74.21074577271956!3d40.67735855419542!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25090129c363d%3A0x40c6a5770d25022b!2sStatue%20of%20Liberty%20National%20Monument!5e0!3m2!1sen!2sbd!4v1599386259810!5m2!1sen!2sbd"></iframe>
 </div>
+-->

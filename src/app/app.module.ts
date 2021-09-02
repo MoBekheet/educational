@@ -41,7 +41,6 @@ import { PrivacyPolicyComponent } from './components/pages/privacy-policy/privac
 import { TermsOfServiceComponent } from './components/pages/terms-of-service/terms-of-service.component';
 import { FaqComponent } from './components/pages/faq/faq.component';
 import { CoursesStyleOneComponent } from './components/pages/courses-style-one/courses-style-one.component';
-import { CoursesStyleTwoComponent } from './components/pages/courses-style-two/courses-style-two.component';
 import { CoursesStyleThreeComponent } from './components/pages/courses-style-three/courses-style-three.component';
 import { CoursesStyleFourComponent } from './components/pages/courses-style-four/courses-style-four.component';
 import { CoursesStyleFiveComponent } from './components/pages/courses-style-five/courses-style-five.component';
@@ -205,7 +204,6 @@ import {ApiService} from "./core/api.service";
     TermsOfServiceComponent,
     FaqComponent,
     CoursesStyleOneComponent,
-    CoursesStyleTwoComponent,
     CoursesStyleThreeComponent,
     CoursesStyleFourComponent,
     CoursesStyleFiveComponent,

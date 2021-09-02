@@ -1,6 +1,14 @@
 import {Component, OnInit} from '@angular/core';
 import {OwlOptions} from 'ngx-owl-carousel-o';
-
+import {ApiService} from "../../../core/api.service";
+import {Router} from "@angular/router";
+interface InterfaceStatistics {
+  blogs: number;
+  categories: number;
+  courses: number;
+  reviews: number;
+  teachers: number;
+}
 @Component({
   selector: 'app-funfacts-feedback',
   templateUrl: './funfacts-feedback.component.html',
@@ -8,11 +16,11 @@ import {OwlOptions} from 'ngx-owl-carousel-o';
 })
 export class FunfactsFeedbackComponent implements OnInit {
 
-  constructor() {
-  }
+  statistics: InterfaceStatistics;
 
-  ngOnInit(): void {
-  }
+  constructor(private apiService: ApiService, private router: Router) {}
+
+  ngOnInit(): void {}
 
   bgImage = [
     {
@@ -36,4 +44,10 @@ export class FunfactsFeedbackComponent implements OnInit {
     ]
   };
 
+/*  getStatistics(): void {
+    this.apiService.GetStatistics().subscribe((response: InterfaceStatistics) => {
+      this.statistics = response;
+      console.error(response);
+    }, error => this.router.navigateByUrl('/not-found').then(value => console.error(error)));
+  }*/
 }

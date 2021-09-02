@@ -21,4 +21,8 @@ export class ApiService {
   public getAllTeachers(): Observable<any> {
     return this.httpClient.get(`${environment.url_api}Teachers/GetAllTeachers`);
   }
+
+  public GetStatistics(): Observable<any> {
+    return this.httpClient.get(`${environment.url_api}Statistics/GetStatistics`);
+  }
 }
