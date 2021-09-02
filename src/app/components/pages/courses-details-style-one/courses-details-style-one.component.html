@@ -24,9 +24,9 @@
         <i class='bx bxs-star'></i>
         <i class='bx bxs-star'></i>
         <i class='bx bxs-star'></i>
-        <div class="rating-count">
+        <!--<div class="rating-count">
           <span>4.0 (1 rating)</span>
-        </div>
+        </div>-->
       </div>
     </div>
   </div>
@@ -149,12 +149,12 @@
                       <div class="advisor-content">
                         <h3>{{courseDetails.teachers.name}}</h3>
                         <span class="sub-title">{{courseDetails.teachers.title}}</span>
-                        <ul class="social-link">
+                       <!-- <ul class="social-link">
                           <li><a href="#" class="d-block" target="_blank"><i class='bx bxl-facebook'></i></a></li>
                           <li><a href="#" class="d-block" target="_blank"><i class='bx bxl-twitter'></i></a></li>
                           <li><a href="#" class="d-block" target="_blank"><i class='bx bxl-instagram'></i></a></li>
                           <li><a href="#" class="d-block" target="_blank"><i class='bx bxl-linkedin'></i></a></li>
-                        </ul>
+                        </ul>-->
                       </div>
                     </div>
                   </div>
@@ -325,7 +325,7 @@
                 {{courseDetails.teachers ? courseDetails.teachers.name : ""}}
               </div>
             </li>
-            <li>
+           <!-- <li>
               <div class="d-flex justify-content-between align-items-center">
                 <span><i class="flaticon-time"></i> مدة</span>
                 7 أسابيع
@@ -342,10 +342,10 @@
                 <span><i class="flaticon-web"></i> المقيدين</span>
                 {{"عدد الطلاب : " + courseDetails.numberOfStudents}}
               </div>
-            </li>
+            </li>-->
 
           </ul>
-          <div class="btn-box">
+         <!-- <div class="btn-box">
             <a routerLink="/single-courses-1" class="default-btn"><i class="flaticon-shopping-cart"></i>أضف إلى السلة<span></span></a>
             <a routerLink="/single-courses-1" class="default-btn"><i
               class="flaticon-tag"></i>اشتري الآن<span></span></a>
@@ -360,7 +360,7 @@
                 <li><a href="#" class="d-block" target="_blank"><i class='bx bxl-linkedin'></i></a></li>
               </ul>
             </div>
-          </div>
+          </div>-->
         </div>
       </div>
     </div>
@@ -373,74 +373,30 @@
       <h2>المزيد من الدورات التي قد تعجبك</h2>
     </div>
     <div class="row justify-content-center">
-      <div class="col-lg-4 col-md-6">
+      <div *ngFor="let filed of allCourses; let i = index" class="col-lg-4 col-md-6">
         <div class="single-courses-box">
           <div class="courses-image">
-            <a routerLink="/single-courses-1" class="d-block image">
-              <img src="assets/img/courses/img1.jpg" alt="image">
+            <!--            <a routerLink="/single-courses-1" class="d-block image">-->
+            <a href="javascript:void(0)" (click)="goTo(filed.id)" class="d-block image">
+              <img [src]="urlImage + filed.image" [alt]="filed.title">
             </a>
-            <!--<a routerLink="/" class="fav"><i class="flaticon-heart"></i></a>-->
-            <div class="price shadow">$39</div>
-          </div>
-          <div class="courses-content">
-            <div class="course-author d-flex align-items-center">
-              <img src="assets/img/user1.jpg" class="rounded-circle" alt="image">
-              <span>Alex Morgan</span>
+            <!--                        <a routerLink="/" class="fav"><i class="flaticon-heart"></i></a>-->
+            <div class="price shadow">
+              <div>{{filed.price}}</div>
+              ر.س
             </div>
-            <h3><a routerLink="/single-courses-1">The Data Science Course 2020: Complete Data Science Bootcamp</a></h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-              dolore.</p>
+          </div>
+          <div class="courses-content pt-5">
+            <!--<div class="course-author d-flex align-items-center">
+                <img src="assets/img/user1.jpg" class="rounded-circle" alt="image">
+                <span>{{filed.teachersId}}</span>
+            </div>-->
+            <h3><a routerLink="/single-courses-1">{{filed.title}}</a></h3>
+            <p>{{filed.body}}</p>
             <ul class="courses-box-footer d-flex justify-content-between align-items-center">
-              <!--<li><i class='flaticon-agenda'></i> 15 Lessons</li>-->
-              <li><i class='flaticon-people'></i> 145 Students</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-6">
-        <div class="single-courses-box">
-          <div class="courses-image">
-            <a routerLink="/single-courses-1" class="d-block image">
-              <img src="assets/img/courses/img2.jpg" alt="image">
-            </a>
-            <!--<a routerLink="/" class="fav"><i class="flaticon-heart"></i></a>-->
-            <div class="price shadow">$49</div>
-          </div>
-          <div class="courses-content">
-            <div class="course-author d-flex align-items-center">
-              <img src="assets/img/user2.jpg" class="rounded-circle" alt="image">
-              <span>Sarah Taylor</span>
-            </div>
-            <h3><a routerLink="/single-courses-1">Java Programming Masterclass for Software Developers</a></h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-              dolore.</p>
-            <ul class="courses-box-footer d-flex justify-content-between align-items-center">
-              <!--<li><i class='flaticon-agenda'></i> 20 Lessons</li>-->
-              <li><i class='flaticon-people'></i> 100 Students</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-6">
-        <div class="single-courses-box">
-          <div class="courses-image">
-            <a routerLink="/single-courses-1" class="d-block image">
-              <img src="assets/img/courses/img3.jpg" alt="image">
-            </a>
-            <!--<a routerLink="/" class="fav"><i class="flaticon-heart"></i></a>-->
-            <div class="price shadow">$59</div>
-          </div>
-          <div class="courses-content">
-            <div class="course-author d-flex align-items-center">
-              <img src="assets/img/user3.jpg" class="rounded-circle" alt="image">
-              <span>David Warner</span>
-            </div>
-            <h3><a routerLink="/single-courses-1">Deep Learning A-Z™: Hands-On Artificial Neural Networks</a></h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-              dolore.</p>
-            <ul class="courses-box-footer d-flex justify-content-between align-items-center">
-              <!--<li><i class='flaticon-agenda'></i> 20 Lessons</li>-->
-              <li><i class='flaticon-people'></i> 150 Students</li>
+              <!--                            <li><i class='flaticon-agenda'></i> 15 Lessons</li>-->
+              <!--<li *ngIf="filed.numberOfStudents"><i class='flaticon-people'></i> عدد الطلاب : {{filed.numberOfStudents}}
+              </li>-->
             </ul>
           </div>
         </div>

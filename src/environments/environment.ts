@@ -4,8 +4,8 @@
 
 export const environment = {
   production: false,
-  url_api: "http://pixelserver-001-site12.ctempurl.com/api/",
-  url_image: "http://pixelserver-001-site12.ctempurl.com/images/"
+  url_api: "http://pixelserver-001-site15.ctempurl.com/api/",
+  url_image: "http://pixelserver-001-site15.ctempurl.com/images/"
 };
 
 /*

@@ -11,6 +11,7 @@ import {throwError} from "rxjs";
 })
 export class CoursesDetailsStyleOneComponent implements OnInit {
   courseDetails: any;
+  allCourses: any;
   loader = false;
   urlImage = environment.url_image;
 
@@ -20,6 +21,7 @@ export class CoursesDetailsStyleOneComponent implements OnInit {
     this.activatedRoute.params.subscribe(param => {
       this.getOneCourse(param.i);
     });
+    this.getCourses();
   }
 
   getOneCourse(CourseId): void {
@@ -28,5 +30,14 @@ export class CoursesDetailsStyleOneComponent implements OnInit {
       this.courseDetails = response;
       this.loader = false;
     },error => this.router.navigateByUrl('/not-found').then(value => console.error(error)));
+  }
+  getCourses(): void {
+    this.apiService.getAllCourses().subscribe(response => {
+      this.allCourses = response;
+      this.allCourses.splice(0, 3);
+    },error => this.router.navigateByUrl('/not-found').then(value => console.error(error)));
+  }
+  goTo(CourseId): void {
+    this.router.navigate(['/single-courses-1', {i: CourseId}]);
   }
 }
