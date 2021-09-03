@@ -14,23 +14,19 @@ export class ContactUsComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  bgImage = [
-    {
-      img: 'assets/img/register-shape.jpg'
-    }
-  ]
+  bgImage = 'assets/img/register-shape.jpg';
 
   submit(form) {
-    var name = form.name;
+    let name = form.name;
     console.log(name);
 
-    var email = form.email;
+    let email = form.email;
     console.log(email);
 
-    var number = form.number;
+    let number = form.number;
     console.log(number);
 
-    var message = form.message;
+    let message = form.message;
     console.log(message);
     this.loader = true;
     setTimeout(_ => {

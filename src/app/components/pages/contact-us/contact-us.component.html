@@ -24,7 +24,7 @@
                             <div class="icon">
                                 <i class='bx bx-map'></i>
                             </div>
-                            <h3>عنواننا</h3>
+                            <h3>عنوان</h3>
                             <p>الباحة _دوار الشفاء _بجانب بن دماس</p>
                         </li>
                         <li>
@@ -32,15 +32,22 @@
                                 <i class='bx bx-phone-call'></i>
                             </div>
                             <h3>اتصل بنا</h3>
-                            <p>الجوال : <a href="tel:+44457895789">055 965 2296</a></p>
-                            <p>البريد : <a href="mailto:hello@odemy.com">future2030v@gmail.com</a></p>
+                            <p>الجوال : <a href="tel:0559652296">2296-965-055</a></p>
+                            <p>البريد : <a href="mailto:future2030v@gmail.com">future2030v@gmail.com</a></p>
                         </li>
-
+                      <li>
+                        <div class="icon">
+                          <i class='bx bx-time-five'></i>
+                        </div>
+                        <h3>ساعات العمل</h3>
+                        <p>الاثنين - الجمعة: 09:00 - 20:00</p>
+                        <p>الأحد والسبت: 10:30 - 22:00</p>
+                      </li>
                     </ul>
                 </div>
             </div>
             <div class="col-lg-6 col-md-12">
-                <div class="contact-form" *ngFor="let Image of bgImage;" style="background-image: url({{Image.img}});">
+                <div class="contact-form" style="background-image: url({{bgImage}});">
                     <h2>على استعداد للبدء؟</h2>
                     <p>لن يتم نشر عنوان بريدك الإلكتروني. الحقول المطلوبة محددة *</p>
                     <form #contactForm="ngForm" (ngSubmit)="submit(contactForm.value)">
