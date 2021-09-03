@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
-import {ApiService} from "../../../../core/api.service";
-import {Router} from "@angular/router";
-import {environment} from "../../../../../environments/environment";
+import {ApiService} from '../../../../core/api.service';
+import {Router} from '@angular/router';
+import {environment} from '../../../../../environments/environment';
 
 @Component({
   selector: 'app-elearning-banner',
@@ -10,12 +10,18 @@ import {environment} from "../../../../../environments/environment";
 })
 export class ElearningBannerComponent implements OnInit {
 
+  constructor(private apiService: ApiService, private router: Router) {
+  }
+
   allCourses = [];
   loader = false;
   urlImage = environment.url_image;
 
-  constructor(private apiService: ApiService, private router: Router) {
-  }
+  bgImage = [
+    {
+      img: 'assets/img/gray-bg.jpg'
+    }
+  ];
 
   ngOnInit(): void {
     this.apiService.getAllCourses().subscribe(response => {
@@ -26,13 +32,7 @@ export class ElearningBannerComponent implements OnInit {
   }
 
   goTo(CourseId): void {
-    this.router.navigate(['/single-courses-1', {i: CourseId}]);
+    this.router.navigate(['/details-courses', {i: CourseId}]);
   }
-
-  bgImage = [
-    {
-      img: 'assets/img/gray-bg.jpg'
-    }
-  ]
 
 }

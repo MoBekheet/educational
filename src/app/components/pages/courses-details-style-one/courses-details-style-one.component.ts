@@ -2,7 +2,6 @@ import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from "@angular/router";
 import {ApiService} from "../../../core/api.service";
 import {environment} from "../../../../environments/environment";
-import {throwError} from "rxjs";
 
 @Component({
     selector: 'app-courses-details-style-one',
@@ -15,8 +14,7 @@ export class CoursesDetailsStyleOneComponent implements OnInit {
     loader = false;
     urlImage = environment.url_image;
 
-    constructor(private activatedRoute: ActivatedRoute, private apiService: ApiService, private router: Router) {
-    }
+    constructor(private activatedRoute: ActivatedRoute, private apiService: ApiService, private router: Router) {}
 
     ngOnInit(): void {
         this.activatedRoute.params.subscribe(param => {
@@ -42,6 +40,6 @@ export class CoursesDetailsStyleOneComponent implements OnInit {
     }
 
     goTo(CourseId): void {
-        this.router.navigate(['/single-courses-1', {i: CourseId}]);
+        this.router.navigate(['/details-courses', {i: CourseId}]);
     }
 }

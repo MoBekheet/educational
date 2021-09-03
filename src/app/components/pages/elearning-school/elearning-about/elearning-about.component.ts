@@ -27,7 +27,7 @@ export class ElearningAboutComponent implements OnInit {
   }
 
   goTo(CourseId): void {
-    this.router.navigate(['/single-courses-1', {i: CourseId}]);
+    this.router.navigate(['/details-courses', {i: CourseId}]);
   }
 
 
