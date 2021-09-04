@@ -17,11 +17,7 @@ export class ElearningBannerComponent implements OnInit {
   loader = false;
   urlImage = environment.url_image;
 
-  bgImage = [
-    {
-      img: 'assets/img/gray-bg.jpg'
-    }
-  ];
+  bgImage = 'assets/img/gray-bg.jpg';
 
   ngOnInit(): void {
     this.apiService.getAllCourses().subscribe(response => {
