@@ -394,7 +394,7 @@ textarea.form-control {
       display: inline-block;
       margin-left: 25px;
       position: relative;
-      color: var(--blackColor);
+      color: #171717;
       font: {
         size: var(--fontSize);
         weight: 600;
@@ -412,7 +412,7 @@ textarea.form-control {
       }
 
       a {
-        color: var(--optionalColor);
+        color: white;
         display: block;
         font-weight: 800;
 
