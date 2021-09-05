@@ -373,7 +373,7 @@ textarea.form-control {
 /*page-title*/
 .page-title-area {
   //background-color: #f8f9f8;
-  background: url("assets/img/banner-bg2.jpg") no-repeat center center;
+  background: url("assets/img/banner-bg2.jpg") no-repeat;
   background-size: cover;
   background-position: center 32%;
   position: relative;
@@ -406,7 +406,7 @@ textarea.form-control {
         left: -12px;
         top: 5px;
         transform: rotate(10deg);
-        background-color: #696969;
+        background-color: white;
         height: 15px;
         width: 1px;
       }

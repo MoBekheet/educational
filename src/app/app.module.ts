@@ -29,6 +29,7 @@ import {FeaturesStyleOneComponent} from './components/common/features-style-one/
 import {ElearningBannerComponent} from './components/pages/elearning-school/elearning-banner/elearning-banner.component';
 import {FeedbackComponent} from "./components/common/feedback/feedback.component";
 import {FunfactsStyleTwoComponent} from "./components/common/funfacts-style-two/funfacts-style-two.component";
+import {OurStoryComponent} from "./components/pages/success-story/our-story/our-story.component";
 
 @NgModule({
   declarations: [
@@ -44,6 +45,7 @@ import {FunfactsStyleTwoComponent} from "./components/common/funfacts-style-two/
     AboutStyleFourComponent,
     TeacherComponent,
     CoursesStyleOneComponent,
+    OurStoryComponent,
     CoursesDetailsStyleOneComponent,
     ProfileComponent,
     ContactUsComponent,
