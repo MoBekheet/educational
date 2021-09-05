@@ -10,25 +10,29 @@ import {environment} from '../../../../../environments/environment';
 })
 export class ElearningBannerComponent implements OnInit {
 
-  constructor(private apiService: ApiService, private router: Router) {
+  constructor(/*private apiService: ApiService, private router: Router*/) {
   }
+/*
 
   allCourses = [];
   loader = false;
   urlImage = environment.url_image;
+*/
 
   bgImage = 'assets/img/gray-bg.jpg';
 
   ngOnInit(): void {
-    this.apiService.getAllCourses().subscribe(response => {
+   /* this.apiService.getAllCourses().subscribe(response => {
       if (response) {
         this.allCourses = response.splice(0, 2);
       }
-    });
+    });*/
   }
+/*
 
   goTo(CourseId): void {
     this.router.navigate(['/details-courses', {i: CourseId}]);
   }
+*/
 
 }
