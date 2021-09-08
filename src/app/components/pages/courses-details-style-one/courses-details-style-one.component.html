@@ -18,24 +18,93 @@
         <li>{{courseDetails.title}}</li>
       </ul>
       <h2>{{courseDetails.title}}</h2>
-      <div class="rating">
+      <!--<div class="rating">
         <i class='bx bxs-star'></i>
         <i class='bx bxs-star'></i>
         <i class='bx bxs-star'></i>
         <i class='bx bxs-star'></i>
         <i class='bx bxs-star'></i>
-        <!--<div class="rating-count">
+        <div class="rating-count">
           <span>4.0 (1 rating)</span>
-        </div>-->
-      </div>
+        </div>
+      </div>-->
     </div>
   </div>
   <div class="shape9"><img src="assets/img/shape8.svg" alt="image"></div>
 </div>
 
 <div *ngIf="!loader && courseDetails" class="courses-details-area pb-100">
-  <div class="courses-details-image">
-    <img [src]="urlImage + courseDetails.image" [alt]="courseDetails.title">
+  <div class="container pt-4">
+    <div class="row">
+      <div class="col-lg-8 col-md-12">
+
+        <div class="courses-details-image">
+          <img [src]="urlImage + courseDetails.image" [alt]="courseDetails.title">
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-12">
+        <div class="courses-details-info">
+          <!-- <div class="image">
+               <img src="assets/img/courses/img1.jpg" alt="image">
+               <a href="https://www.youtube.com/watch?v=PWvPbGWVRrU" class="link-btn popup-youtube"></a>
+               <div class="content">
+                   <i class="flaticon-play"></i>
+                   <span>Course Preview</span>
+               </div>
+           </div>-->
+          <ul class="info">
+            <li class="price">
+              <div class="d-flex justify-content-between align-items-center">
+                <span><i class="flaticon-tag"></i> سعر</span>
+                {{courseDetails.price}}ر.س
+              </div>
+            </li>
+            <li>
+              <div class="d-flex justify-content-between align-items-center">
+                <span><i class="flaticon-teacher"></i> المدرب </span>
+                {{courseDetails.teachers ? courseDetails.teachers.name : ""}}
+              </div>
+            </li>
+            <!-- <li>
+               <div class="d-flex justify-content-between align-items-center">
+                 <span><i class="flaticon-time"></i> مدة</span>
+                 7 أسابيع
+               </div>
+             </li>
+             <li>
+               <div class="d-flex justify-content-between align-items-center">
+                 <span><i class="flaticon-distance-learning"></i> الدروس</span>
+                 25
+               </div>
+             </li>
+             <li *ngIf="courseDetails.numberOfStudents">
+               <div class="d-flex justify-content-between align-items-center">
+                 <span><i class="flaticon-web"></i> المقيدين</span>
+                 {{"عدد الطلاب : " + courseDetails.numberOfStudents}}
+               </div>
+             </li>-->
+
+          </ul>
+          <!-- <div class="btn-box">
+             <a routerLink="/details-courses" class="default-btn"><i class="flaticon-shopping-cart"></i>أضف إلى السلة<span></span></a>
+             <a routerLink="/details-courses" class="default-btn"><i
+               class="flaticon-tag"></i>اشتري الآن<span></span></a>
+           </div>
+           <div class="courses-share">
+             <div class="share-info">
+               <span><i class="flaticon-share"></i> شارك هذه الدورة</span>
+               <ul class="social-link">
+                 <li><a href="#" class="d-block" target="_blank"><i class='bx bxl-facebook'></i></a></li>
+                 <li><a href="#" class="d-block" target="_blank"><i class='bx bxl-twitter'></i></a></li>
+                 <li><a href="#" class="d-block" target="_blank"><i class='bx bxl-instagram'></i></a></li>
+                 <li><a href="#" class="d-block" target="_blank"><i class='bx bxl-linkedin'></i></a></li>
+               </ul>
+             </div>
+           </div>-->
+        </div>
+
+      </div>
+    </div>
   </div>
   <div class="container">
     <div class="row">
@@ -43,7 +112,8 @@
         <div class="courses-details-desc">
           <ngx-tabset>
             <ngx-tab tabTitle="نظرة عامة">
-              <div *ngIf="courseDetails.body; else NoDetails" class="courses-overview" [innerHTML]="courseDetails.body"></div>
+              <div *ngIf="courseDetails.body; else NoDetails" class="courses-overview"
+                   [innerHTML]="courseDetails.body"></div>
               <ng-template class="courses-overview" #NoDetails>
                 <h3>لا توجد تفاصيل</h3>
               </ng-template>
@@ -149,12 +219,12 @@
                       <div class="advisor-content">
                         <h3>{{courseDetails.teachers.name}}</h3>
                         <span class="sub-title">{{courseDetails.teachers.title}}</span>
-                       <!-- <ul class="social-link">
-                          <li><a href="#" class="d-block" target="_blank"><i class='bx bxl-facebook'></i></a></li>
-                          <li><a href="#" class="d-block" target="_blank"><i class='bx bxl-twitter'></i></a></li>
-                          <li><a href="#" class="d-block" target="_blank"><i class='bx bxl-instagram'></i></a></li>
-                          <li><a href="#" class="d-block" target="_blank"><i class='bx bxl-linkedin'></i></a></li>
-                        </ul>-->
+                        <!-- <ul class="social-link">
+                           <li><a href="#" class="d-block" target="_blank"><i class='bx bxl-facebook'></i></a></li>
+                           <li><a href="#" class="d-block" target="_blank"><i class='bx bxl-twitter'></i></a></li>
+                           <li><a href="#" class="d-block" target="_blank"><i class='bx bxl-instagram'></i></a></li>
+                           <li><a href="#" class="d-block" target="_blank"><i class='bx bxl-linkedin'></i></a></li>
+                         </ul>-->
                       </div>
                     </div>
                   </div>
@@ -300,67 +370,6 @@
               </div>
             </ngx-tab>-->
           </ngx-tabset>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-12">
-        <div class="courses-details-info">
-          <!-- <div class="image">
-               <img src="assets/img/courses/img1.jpg" alt="image">
-               <a href="https://www.youtube.com/watch?v=PWvPbGWVRrU" class="link-btn popup-youtube"></a>
-               <div class="content">
-                   <i class="flaticon-play"></i>
-                   <span>Course Preview</span>
-               </div>
-           </div>-->
-          <ul class="info">
-            <li class="price">
-              <div class="d-flex justify-content-between align-items-center">
-                <span><i class="flaticon-tag"></i> سعر</span>
-                {{courseDetails.price}}ر.س
-              </div>
-            </li>
-            <li>
-              <div class="d-flex justify-content-between align-items-center">
-                <span><i class="flaticon-teacher"></i> المدرب </span>
-                {{courseDetails.teachers ? courseDetails.teachers.name : ""}}
-              </div>
-            </li>
-           <!-- <li>
-              <div class="d-flex justify-content-between align-items-center">
-                <span><i class="flaticon-time"></i> مدة</span>
-                7 أسابيع
-              </div>
-            </li>
-            <li>
-              <div class="d-flex justify-content-between align-items-center">
-                <span><i class="flaticon-distance-learning"></i> الدروس</span>
-                25
-              </div>
-            </li>
-            <li *ngIf="courseDetails.numberOfStudents">
-              <div class="d-flex justify-content-between align-items-center">
-                <span><i class="flaticon-web"></i> المقيدين</span>
-                {{"عدد الطلاب : " + courseDetails.numberOfStudents}}
-              </div>
-            </li>-->
-
-          </ul>
-         <!-- <div class="btn-box">
-            <a routerLink="/details-courses" class="default-btn"><i class="flaticon-shopping-cart"></i>أضف إلى السلة<span></span></a>
-            <a routerLink="/details-courses" class="default-btn"><i
-              class="flaticon-tag"></i>اشتري الآن<span></span></a>
-          </div>
-          <div class="courses-share">
-            <div class="share-info">
-              <span><i class="flaticon-share"></i> شارك هذه الدورة</span>
-              <ul class="social-link">
-                <li><a href="#" class="d-block" target="_blank"><i class='bx bxl-facebook'></i></a></li>
-                <li><a href="#" class="d-block" target="_blank"><i class='bx bxl-twitter'></i></a></li>
-                <li><a href="#" class="d-block" target="_blank"><i class='bx bxl-instagram'></i></a></li>
-                <li><a href="#" class="d-block" target="_blank"><i class='bx bxl-linkedin'></i></a></li>
-              </ul>
-            </div>
-          </div>-->
         </div>
       </div>
     </div>
