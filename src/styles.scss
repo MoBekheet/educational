@@ -1,10 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
 //@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;700&display=swap');
+//@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap');
 //@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 :root {
   --fontFamily2: 'Nunito', sans-serif;
-  --fontFamily: 'Cairo', sans-serif;
+  --fontFamily: 'Tajawal', sans-serif;
   //--fontFamily2: 'Playfair Display', serif;
   --mainColor: #fe4a55;
   --secondaryColor: #6ba292;
@@ -54,7 +55,7 @@ p {
 }
 
 .bg-fef8ef {
-  background-color: #fef8ef;
+  background-color: #fff;
 }
 
 .bg-fe4a55 {
@@ -183,7 +184,7 @@ a {
 }
 
 .playfair-display-font {
-  font-family: var(--fontFamily2);
+  font-family: var(--fontFamily);
 }
 
 /*section-title*/
@@ -2845,8 +2846,8 @@ textarea.form-control {
         padding: 0;
         background-color: var(--whiteColor) !important;
         width: 40px;
-        color: var(--mainColor);
-        border: 1px solid var(--mainColor);
+        color: var(--secondaryColor);
+        border: 1px solid var(--secondaryColor);
         height: 40px;
         font-size: 25px !important;
         transition: var(--transition);
@@ -2861,7 +2862,7 @@ textarea.form-control {
         }
 
         &:hover {
-          background-color: var(--mainColor) !important;
+          background-color: var(--secondaryColor) !important;
           color: var(--whiteColor);
         }
 
@@ -3635,6 +3636,7 @@ blockquote, .blockquote {
 .features-area {
   position: relative;
   z-index: 1;
+  background-color: #f5f7fa;
 }
 
 /*shape*/

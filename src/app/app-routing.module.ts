@@ -8,12 +8,14 @@ import { ErrorComponent } from './components/pages/error/error.component';
 import { CoursesStyleOneComponent } from './components/pages/courses-style-one/courses-style-one.component';
 import { CoursesDetailsStyleOneComponent } from './components/pages/courses-details-style-one/courses-details-style-one.component';
 import { ProfileComponent } from './components/pages/profile/profile.component';
+import {PrivacyPolicyComponent} from "./components/pages/privacy-policy/privacy-policy.component";
 
 const routes: Routes = [
     {path: '', component: ElearningSchoolComponent},
     {path: 'about', component: AboutStyleFourComponent},
     {path: 'teacher', component: TeacherComponent},
     {path: 'courses', component: CoursesStyleOneComponent},
+    {path: 'privacy-policy', component: PrivacyPolicyComponent},
     {path: 'details-courses', component: CoursesDetailsStyleOneComponent},
     {path: 'profile', component: ProfileComponent},
     {path: 'contact', component: ContactUsComponent},
