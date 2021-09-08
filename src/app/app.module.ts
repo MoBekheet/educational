@@ -30,6 +30,7 @@ import {ElearningBannerComponent} from './components/pages/elearning-school/elea
 import {FeedbackComponent} from "./components/common/feedback/feedback.component";
 import {FunfactsStyleTwoComponent} from "./components/common/funfacts-style-two/funfacts-style-two.component";
 import {OurStoryComponent} from "./components/pages/success-story/our-story/our-story.component";
+import {PrivacyPolicyComponent} from "./components/pages/privacy-policy/privacy-policy.component";
 
 @NgModule({
   declarations: [
@@ -43,6 +44,7 @@ import {OurStoryComponent} from "./components/pages/success-story/our-story/our-
     FeaturesStyleOneComponent,
     ElearningBannerComponent,
     AboutStyleFourComponent,
+    PrivacyPolicyComponent,
     TeacherComponent,
     CoursesStyleOneComponent,
     OurStoryComponent,
