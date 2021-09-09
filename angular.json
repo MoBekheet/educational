@@ -22,7 +22,7 @@
               "ng2-sticky-nav",
               "ngx-accordion"
             ],
-            "outputPath": "dist/odemy-ng",
+            "outputPath": "dist/odemy-ng/browser",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -49,7 +49,8 @@
             "buildOptimizer": false,
             "sourceMap": true,
             "optimization": false,
-            "namedChunks": true
+            "namedChunks": true,
+            "aot": true
           },
           "configurations": {
             "production": {
@@ -140,6 +141,65 @@
               "devServerTarget": "odemy-ng:serve:production"
             }
           }
+        },
+        "server": {
+          "builder": "@angular-devkit/build-angular:server",
+          "options": {
+            "outputPath": "dist/odemy-ng/server",
+            "main": "server.ts",
+            "tsConfig": "tsconfig.server.json",
+            "optimization": false,
+            "sourceMap": true,
+            "extractLicenses": false
+          },
+          "configurations": {
+            "production": {
+              "outputHashing": "media",
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "sourceMap": false,
+              "extractLicenses": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve-ssr": {
+          "builder": "@nguniversal/builders:ssr-dev-server",
+          "configurations": {
+            "development": {
+              "browserTarget": "odemy-ng:build:development",
+              "serverTarget": "odemy-ng:server:development"
+            },
+            "production": {
+              "browserTarget": "odemy-ng:build:production",
+              "serverTarget": "odemy-ng:server:production"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "prerender": {
+          "builder": "@nguniversal/builders:prerender",
+          "options": {
+            "routes": [
+              "/"
+            ]
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "odemy-ng:build:production",
+              "serverTarget": "odemy-ng:server:production"
+            },
+            "development": {
+              "browserTarget": "odemy-ng:build:development",
+              "serverTarget": "odemy-ng:server:development"
+            }
+          },
+          "defaultConfiguration": "production"
         }
       }
     }
